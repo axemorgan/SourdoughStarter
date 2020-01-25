@@ -20,12 +20,25 @@ object Kotlin {
  */
 object AndroidX {
     private object Versions {
+        const val cardView = "1.0.0"
         const val appcompat = "1.1.0"
+        const val biometric = "1.0.1"
+        const val browser = "1.2.0"
         const val constraintLayout = "1.1.3"
+        const val coordinatorLayout = "1.1.0"
+        const val lifecycle = "2.1.0"
+        const val recyclerView = "1.1.0"
     }
 
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
+    const val biometric = "androidx.biometric:biometric:${Versions.biometric}"
+    const val browser = "androidx.browser:browser:${Versions.browser}"
+    const val cardView = "androidx.cardview:cardview:${Versions.cardView}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val coordinatorLayout = "androidx.coordinatorlayout:coordinatorlayout:${Versions.coordinatorLayout}"
+    const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$${Versions.lifecycle}"
 }
 
 object Dependencies {
