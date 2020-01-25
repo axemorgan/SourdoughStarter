@@ -1,4 +1,4 @@
-# SourdoughStarter
+# Sourdough Starter
 A starter culture for Android Projects :bread:
 
 ### Kotlin
