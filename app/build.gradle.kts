@@ -1,7 +1,10 @@
+import Dependencies.daggerAndroid
+
 plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("android.extensions")
+    kotlin("kapt")
 }
 
 android {
@@ -18,6 +21,14 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -28,11 +39,9 @@ android {
 
 dependencies {
     implementation(Kotlin.stdlib)
-//    implementation('androidx.appcompat:appcompat:1.0.2')
-//    implementation('androidx.core:core-ktx:1.0.2')
-//
-//    testImplementation('junit:junit:4.12')
-//
-//    androidTestImplementation('androidx.test.ext:junit:1.1.0')
-//    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.1')
+
+    implementation(AndroidX.appcompat)
+    implementation(AndroidX.constraintLayout)
+
+    daggerAndroid()
 }
