@@ -8,6 +8,7 @@ A starter culture for Android Projects :bread:
 
 ### Dagger Android
 * Ready made `Application` subclass and an AppComponent to inject it
+* Activity and Fragment scopes
 * An example `Activity` and `Fragment` injected using Dagger Android
 * Useful base classes for Activites and Fragments that perform injection automatically
 
