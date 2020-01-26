@@ -12,7 +12,10 @@ class Application : Application(), HasAndroidInjector {
 
     override fun onCreate() {
         super.onCreate()
-        DaggerAppComponent.create().inject(this)
+        DaggerAppComponent.builder()
+            .bindApplicationContext(this)
+            .build()
+            .inject(this)
     }
 
     override fun androidInjector() = dispatchingAndroidInjector
