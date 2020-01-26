@@ -6,6 +6,10 @@ A starter culture for Android Projects :bread:
 * Kotlin build scripts and `buildSrc` dependency management (with autocomplete)
 * Kotlin Android Extensions and kapt plugins applied
 
+### AndroidX
+* AndroidX and Jetifier already enabled
+* A selection of common AndroidX dependencies (recycler view, constraint layout, view model, etc.) easily included
+
 ### Dagger Android
 * Ready made `Application` subclass and an AppComponent to inject it
 * Activity and Fragment scopes
