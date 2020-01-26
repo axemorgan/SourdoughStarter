@@ -19,6 +19,7 @@ Instead of cloning or forking this repo, use it as a [template](https://help.git
 * Activity and Fragment scopes
 * An example `Activity` and `Fragment` injected using Dagger Android
 * Useful base classes for Activites and Fragments that perform injection automatically
+* Support for binding and injecting `ViewModels` built-in
 
 ### Misc
 * A .gitignore file for Android Studio projects

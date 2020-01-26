@@ -7,7 +7,7 @@ import dev.alexmorgan.changethis.main_activity.MainActivityFeatureModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AndroidSupportInjectionModule::class, MainActivityFeatureModule::class])
+@Component(modules = [AppModule::class, AndroidSupportInjectionModule::class, MainActivityFeatureModule::class])
 interface AppComponent {
     fun inject(application: Application)
 }
