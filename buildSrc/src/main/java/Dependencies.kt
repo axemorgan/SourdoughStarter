@@ -28,6 +28,7 @@ object AndroidX {
         const val coordinatorLayout = "1.1.0"
         const val lifecycle = "2.1.0"
         const val recyclerView = "1.1.0"
+        const val room = "2.2.3"
     }
 
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
@@ -38,7 +39,19 @@ object AndroidX {
     const val coordinatorLayout = "androidx.coordinatorlayout:coordinatorlayout:${Versions.coordinatorLayout}"
     const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
+    const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+    const val roomKtx = "androidx.room:room-ktx:${Versions.room}"
     const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$${Versions.lifecycle}"
+
+    /**
+     * Configures all the required dependencies for Room
+     */
+    fun DependencyHandlerScope.room() {
+        add("implementation", roomRuntime)
+        add("implementation", roomKtx)
+        add("kapt", roomCompiler)
+    }
 }
 
 object Dependencies {

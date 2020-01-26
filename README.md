@@ -12,7 +12,7 @@ Instead of cloning or forking this repo, use it as a [template](https://help.git
 
 ### AndroidX
 * AndroidX and Jetifier already enabled
-* A selection of common AndroidX dependencies (recycler view, constraint layout, view model, etc.) easily included
+* A selection of common AndroidX dependencies (recycler view, constraint layout, view model, ROOM, etc.) easily included
 
 ### Dagger Android
 * Ready made `Application` subclass and an AppComponent to inject it
