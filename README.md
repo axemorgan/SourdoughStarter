@@ -1,6 +1,10 @@
 # Sourdough Starter
 A starter culture for Android Projects :bread:
 
+Instead of cloning or forking this repo, use it as a [template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) instead.  
+
+
+
 ### Kotlin
 * Kotlin and Java 8 pre-configured
 * Kotlin build scripts and `buildSrc` dependency management (with autocomplete)
