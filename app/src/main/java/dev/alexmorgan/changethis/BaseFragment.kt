@@ -17,7 +17,7 @@ abstract class BaseFragment : DaggerFragment() {
         savedInstanceState: Bundle?
     ): View? {
         return layoutId?.let {
-            inflater.inflate(it, container)
+            inflater.inflate(it, container, false)
         }
     }
 }
