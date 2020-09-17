@@ -42,6 +42,7 @@ dependencies {
 
     implementation(AndroidX.appcompat)
     implementation(AndroidX.constraintLayout)
+    implementation(AndroidX.coreKtx)
 
     daggerAndroid()
 }
