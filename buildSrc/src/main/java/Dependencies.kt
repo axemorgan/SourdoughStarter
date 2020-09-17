@@ -2,7 +2,7 @@
 
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 
-const val compileSdk = 29
+const val compileSdk = 30
 const val minSdk = 23
 const val targetSdk = 29
 
