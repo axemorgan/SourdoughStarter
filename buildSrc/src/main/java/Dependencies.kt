@@ -24,11 +24,11 @@ object AndroidX {
         const val appcompat = "1.1.0"
         const val biometric = "1.0.1"
         const val browser = "1.2.0"
-        const val constraintLayout = "1.1.3"
+        const val constraintLayout = "2.0.0"
         const val coordinatorLayout = "1.1.0"
-        const val lifecycle = "2.1.0"
+        const val lifecycle = "2.2.0"
         const val recyclerView = "1.1.0"
-        const val room = "2.2.3"
+        const val room = "2.2.5"
     }
 
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
@@ -56,7 +56,7 @@ object AndroidX {
 
 object Dependencies {
     private object Versions {
-        const val dagger = "2.25.4"
+        const val dagger = "2.29.1"
     }
 
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
