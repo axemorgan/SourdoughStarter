@@ -10,7 +10,7 @@ const val targetSdk = 29
  * org.jetbrains.kotlin dependencies
  */
 object Kotlin {
-    const val version = "1.3.61"
+    const val version = "1.4.10"
 
     const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version"
 }
