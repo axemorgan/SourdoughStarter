@@ -19,10 +19,8 @@ interface MainFragmentModule {
     @ContributesAndroidInjector
     fun contributeMainFragment(): MainFragment
 
-    @Module
     companion object {
         @Provides
-        @JvmStatic
         fun provideString(): String = "Hello World!"
     }
 }
