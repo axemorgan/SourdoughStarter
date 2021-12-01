@@ -8,14 +8,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion(compileSdk)
+    compileSdk = Configuration.compileSdk
 
     defaultConfig {
         // FIXME: change this to your desired package name
         applicationId = "dev.alexmorgan.changethis"
 
-        minSdkVersion(minSdk)
-        targetSdkVersion(targetSdk)
+        minSdk = Configuration.minSdk
+        targetSdk = Configuration.targetSdk
         versionCode = 1
         versionName = "0.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
