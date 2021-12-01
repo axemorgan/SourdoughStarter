@@ -12,7 +12,7 @@ object Configuration {
  * org.jetbrains.kotlin dependencies
  */
 object Kotlin {
-    const val version = "1.4.10"
+    const val version = "1.6.0"
 
     const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version"
 }
@@ -60,7 +60,7 @@ object AndroidX {
 
 object Dependencies {
     private object Versions {
-        const val dagger = "2.29.1"
+        const val dagger = "2.40.3"
     }
 
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
