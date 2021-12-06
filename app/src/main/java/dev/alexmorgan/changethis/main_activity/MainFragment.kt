@@ -3,10 +3,12 @@ package dev.alexmorgan.changethis.main_activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import dagger.hilt.android.AndroidEntryPoint
 import dev.alexmorgan.changethis.BaseFragment
 import dev.alexmorgan.changethis.databinding.MainFragmentBinding
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainFragment : BaseFragment<MainFragmentBinding>() {
 
     @Inject

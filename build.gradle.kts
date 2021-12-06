@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:7.0.3")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Kotlin.version}")
+        classpath(Dependencies.hiltPlugin)
     }
 }
 

@@ -1,7 +1,8 @@
-import Dependencies.daggerAndroid
+import Dependencies.daggerHilt
 
 plugins {
     id("com.android.application")
+    id("dagger.hilt.android.plugin")
     kotlin("android")
     kotlin("kapt")
 }
@@ -47,5 +48,5 @@ dependencies {
     implementation(AndroidX.constraintLayout)
     implementation(AndroidX.coreKtx)
 
-    daggerAndroid()
+    daggerHilt()
 }

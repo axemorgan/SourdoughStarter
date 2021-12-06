@@ -1,4 +1,4 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
+@file:Suppress("MemberVisibilityCanBePrivate", "unused")
 
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 
@@ -65,18 +65,12 @@ object Dependencies {
 
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
     const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
-    const val daggerAndroid = "com.google.dagger:dagger-android:${Versions.dagger}"
-    const val daggerAndroidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
-    const val daggerAndroidProcessor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
+    const val hiltPlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.dagger}"
+    const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.dagger}"
+    const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.dagger}"
 
-    /**
-     * Configures all the required dependencies for Dagger Android
-     */
-    fun DependencyHandlerScope.daggerAndroid() {
-        add("implementation", dagger)
-        add("kapt", daggerCompiler)
-        add("implementation", daggerAndroid)
-        add("implementation", daggerAndroidSupport)
-        add("kapt", daggerAndroidProcessor)
+    fun DependencyHandlerScope.daggerHilt() {
+        add("implementation", hiltAndroid)
+        add("kapt", hiltCompiler)
     }
 }
