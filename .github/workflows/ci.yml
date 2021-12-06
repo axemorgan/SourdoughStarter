@@ -13,6 +13,8 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
           cache: 'gradle'
+      - name: Setup Android problem matchers
+        uses: jonasb/android-problem-matchers-action@v1
       - run: ./gradlew build
 
   unit-test:
@@ -26,4 +28,6 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
           cache: 'gradle'
+      - name: Setup Android problem matchers
+        uses: jonasb/android-problem-matchers-action@v1
       - run: ./gradlew test
