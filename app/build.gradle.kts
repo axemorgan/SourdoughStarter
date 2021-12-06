@@ -1,8 +1,10 @@
 import Dependencies.daggerHilt
+import Dependencies.junit5
 
 plugins {
     id("com.android.application")
     id("dagger.hilt.android.plugin")
+    id("de.mannodermaus.android-junit5")
     kotlin("android")
     kotlin("kapt")
 }
@@ -49,4 +51,7 @@ dependencies {
     implementation(AndroidX.coreKtx)
 
     daggerHilt()
+
+    junit5()
+    testImplementation(Dependencies.strikt)
 }
