@@ -1,14 +1,14 @@
 # Sourdough Starter
 A starter culture for Android Projects :bread:
 
-Instead of cloning or forking this repo, use it as a [template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) instead.  
+Instead of cloning or forking this repo, use it as a [template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) instead.
 
-
+### ViewBinding
+* Pre-configured View Binding and a BaseFragment class to easily manage binding and unbinding the Fragment view
 
 ### Kotlin
-* Kotlin and Java 8 pre-configured
-* Kotlin build scripts and `buildSrc` dependency management (with autocomplete)
-* Kotlin Android Extensions and kapt plugins applied
+* Kotlin and Java 8 source compatibility pre-configured
+* Kotlin build scripts and `buildSrc` for dependency management
 
 ### AndroidX
 * AndroidX and Jetifier already enabled

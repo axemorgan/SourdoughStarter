@@ -2,12 +2,13 @@ package dev.alexmorgan.changethis.main_activity
 
 import android.os.Bundle
 import dev.alexmorgan.changethis.BaseActivity
-import dev.alexmorgan.changethis.R
+import dev.alexmorgan.changethis.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }
