@@ -15,7 +15,7 @@ jobs:
           cache: 'gradle'
       - name: Setup Android problem matchers
         uses: jonasb/android-problem-matchers-action@v1
-      - run: ./gradlew build
+      - run: ./gradlew assemble
 
   unit-test:
     name: 'Unit Test'
