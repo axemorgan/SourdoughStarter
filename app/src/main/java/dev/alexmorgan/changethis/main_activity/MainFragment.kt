@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import dagger.hilt.android.AndroidEntryPoint
-import dev.alexmorgan.changethis.BaseFragment
+import dev.alexmorgan.changethis.ViewBoundFragment
 import dev.alexmorgan.changethis.databinding.MainFragmentBinding
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainFragment : BaseFragment<MainFragmentBinding>() {
+class MainFragment : ViewBoundFragment<MainFragmentBinding>() {
 
     @Inject
     lateinit var message: String
