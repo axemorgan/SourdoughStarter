@@ -61,6 +61,9 @@ object AndroidX {
 object Dependencies {
     private object Versions {
         const val dagger = "2.40.3"
+        const val junit = "5.8.0"
+        const val junitLegacy = "4.13.2"
+        const val strikt = "0.33.0"
     }
 
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
@@ -69,8 +72,39 @@ object Dependencies {
     const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.dagger}"
     const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.dagger}"
 
+    /**
+     * Includes all dependency configuration required to use Dagger Hilt
+     */
     fun DependencyHandlerScope.daggerHilt() {
         add("implementation", hiltAndroid)
         add("kapt", hiltCompiler)
     }
+
+    const val jupiterApi = "org.junit.jupiter:junit-jupiter-api:${Versions.junit}"
+    const val jupiterEngine = "org.junit.jupiter:junit-jupiter-engine:${Versions.junit}"
+    const val jupiterParameterized = "org.junit.jupiter:junit-jupiter-params:${Versions.junit}"
+
+    const val junitVintageEngine = "org.junit.jupiter:junit-vintage-engine:${Versions.junit}"
+    const val junit4 = "junit:junit:${Versions.junitLegacy}"
+
+    /**
+     * Includes all dependency configuration required to use JUnit 5 tests. (Without legacy support for JUnit 4)
+     */
+    fun DependencyHandlerScope.junit5() {
+        add("testImplementation", jupiterApi)
+        add("testRuntimeOnly", jupiterEngine)
+        add("testImplementation", jupiterParameterized)
+    }
+
+    /**
+     * Includes all dependency configuration required to use JUnit 5 tests, and includes junit 4 and the
+     * vintage engine, allowing you to run legacy tests in JUnit 5.
+     */
+    fun DependencyHandlerScope.junit5WithLegacySupport() {
+        junit5()
+        add("testImplementation", junit4)
+        add("testRuntimeOnly", junitVintageEngine)
+    }
+
+    const val strikt = "io.strikt:strikt-core:${Versions.strikt}"
 }
