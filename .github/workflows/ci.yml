@@ -18,7 +18,7 @@ jobs:
       - run: ./gradlew assemble
 
   unit-test:
-    name: 'Unit Test'
+    name: 'Unit Tests'
     needs: [ build ]
     runs-on: ubuntu-latest
     steps:
@@ -31,3 +31,21 @@ jobs:
       - name: Setup Android problem matchers
         uses: jonasb/android-problem-matchers-action@v1
       - run: ./gradlew test
+
+  android-test:
+    name: 'Android Tests'
+    needs: [ build ]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+          cache: 'gradle'
+      - name: Run Tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 30
+          target: google_apis
+          script: ./gradlew connectedAndroidTest

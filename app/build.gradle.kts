@@ -1,5 +1,6 @@
 import Dependencies.daggerHilt
 import Dependencies.junit5
+import Dependencies.junit5AndroidTests
 
 plugins {
     id("com.android.application")
@@ -21,6 +22,7 @@ android {
         versionCode = 1
         versionName = "0.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments["runnerBuilder"] = "de.mannodermaus.junit5.AndroidJUnit5Builder"
     }
 
     compileOptions {
@@ -54,4 +56,8 @@ dependencies {
 
     junit5()
     testImplementation(Dependencies.strikt)
+
+    junit5AndroidTests()
+    androidTestImplementation(AndroidX.testCore)
+    androidTestImplementation(AndroidX.espressoCore)
 }
